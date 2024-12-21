@@ -1,0 +1,45 @@
+.virtual-dietician-container {
+    max-width: 600px;
+    margin: 20px auto; /* Add margin to create gap */
+    padding: 20px;
+    background-color: #00BC8C;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Rest of the CSS styles remain unchanged */
+  
+  
+  .diet-form {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .nutrients-result {
+    margin-top: 20px;
+  }
+
+  
