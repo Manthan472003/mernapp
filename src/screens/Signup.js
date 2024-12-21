@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { API_URL } from './env';
+
 
 export default function Signup() {
     const [credentials, setCredentials] = useState({ name: "", email: "", password: "", geolocation: "" });
@@ -9,7 +11,7 @@ export default function Signup() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch("https://epiceatsbackend.vercel.app/api/createuser", {
+        const response = await fetch(`${API_URL}/api/createuser`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

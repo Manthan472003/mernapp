@@ -1,6 +1,8 @@
 import React from 'react'
 import { MdDelete } from "react-icons/md";
 import { useCart, useDispatchCart } from '../components/ContextReducer';
+import { API_URL } from './env';
+
 export default function Cart() {
   let data = useCart();
   let dispatch = useDispatchCart();
@@ -18,7 +20,7 @@ export default function Cart() {
 
   const handleCheckOut = async () => {
     let userEmail = localStorage.getItem("userEmail");
-    let response = await fetch("https://epiceatsbackend.vercel.app/api/orderData", {
+    let response = await fetch(`${API_URL}/api/orderData`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

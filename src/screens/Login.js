@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Link,useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { API_URL } from './env';
+
 
 export default function Login() {
   const [credentials, setcredentials] = useState({ name: "", email: ""})
@@ -9,7 +11,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(JSON.stringify({ email: credentials.email, password: credentials.password }))
-    const response = await fetch("https://epiceatsbackend.vercel.app/api/loginuser", {
+    const response = await fetch(`${API_URL}/api/loginuser`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

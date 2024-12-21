@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Card from '../components/Card';
+import { API_URL } from './env';
 
 export default function Home() {
   const [search, setSearch] = useState('');
@@ -12,7 +13,7 @@ export default function Home() {
   // Fetch food data
   const loadData = async () => {
     try {
-      const response = await fetch('https://epiceatsbackend.vercel.app/api/foodData', {
+      const response = await fetch(`${API_URL}/api/foodData`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
       });

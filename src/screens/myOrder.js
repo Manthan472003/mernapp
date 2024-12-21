@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import { API_URL } from './env';
+
 
 export default function MyOrder() {
     const [orderData, setOrderData] = useState({});
 
     const fetchMyOrder = async () => {
         console.log(localStorage.getItem('userEmail'))
-        await fetch("https://epiceatsbackend.vercel.app/api/myOrderData", {
+        await fetch(`${API_URL}/api/myOrderData`, {
             // credentials: 'include',
             // Origin:"http://localhost:3000/login",
             method: 'POST',
